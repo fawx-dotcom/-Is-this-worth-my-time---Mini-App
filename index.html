@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Is This Worth My Time? | Decision Filter</title>
+    <meta name="description" content="A simple tool to help you make better decisions and protect your time.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="background-glow"></div>
+
+    <main class="container">
+        <header>
+            <h1>Is This Worth My Time?</h1>
+            <p class="subtitle">Stop saying "yes" out of guilt. Gain clarity.</p>
+        </header>
+
+        <section class="card form-card">
+            <form id="decisionForm">
+                <div class="form-group">
+                    <label class="question-label">1. Will this move me closer to my goal?</label>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="closerToGoal" value="Yes" required>
+                            <span class="radio-custom"></span>
+                            Yes
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="closerToGoal" value="No">
+                            <span class="radio-custom"></span>
+                            No
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="question-label">2. Will I feel energized or drained?</label>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="energy" value="Energized" required>
+                            <span class="radio-custom"></span>
+                            Energized
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="energy" value="Drained">
+                            <span class="radio-custom"></span>
+                            Drained
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="question-label" for="alternative">3. If I said no, what would I do instead?</label>
+                    <textarea id="alternative" name="alternative"
+                        placeholder="e.g., Work on my side project, rest, read..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn-primary">
+                    <span>Analyze Decision</span>
+                </button>
+            </form>
+        </section>
+
+        <section class="history-section">
+            <h2>Decision History</h2>
+            <div id="historyList" class="history-list">
+                <!-- History items will be injected here -->
+                <div class="empty-state">No decisions recorded yet. Start filtering!</div>
+            </div>
+            <button id="clearHistory" class="btn-text">Clear History</button>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
